@@ -2,14 +2,14 @@ importScripts('https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js
 importScripts('https://www.gstatic.com/firebasejs/10.13.2/firebase-messaging-compat.js');
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD6hwSdqMnt-E6zcPtmoLh5Fl-WSflFbEQ",
-    authDomain: "fir-chat-188b9.firebaseapp.com",
-    projectId: "fir-chat-188b9",
-    storageBucket: "fir-chat-188b9.firebasestorage.app",
-    messagingSenderId: "172801949831",
-    appId: "1:172801949831:web:e8acfa343680bd4a10f822",
-    measurementId: "G-HKRC54M3K4"
-  };
+  apiKey: "AIzaSyBYccN8Rp-vptNrBVsUUC2i72NbvRV8ZF8",
+  authDomain: "chat-3eb3a.firebaseapp.com",
+  projectId: "chat-3eb3a",
+  storageBucket: "chat-3eb3a.firebasestorage.app",
+  messagingSenderId: "644153889817",
+  appId: "1:644153889817:web:f2109bf0013a47ef348688",
+  measurementId: "G-4YPCWYDLG3"
+};
 
 firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();

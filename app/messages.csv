@@ -1,0 +1,26 @@
+import firebase_admin
+from firebase_admin import credentials, firestore
+import csv
+
+# Initialize Firebase
+cred = credentials.Certificate("app/firebase_credentials.json")
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
+
+# Fetch messages
+messages_ref = db.collection('messages')
+docs = messages_ref.stream()
+
+# Prepare CSV file
+with open('messages.csv', mode='w', newline='', encoding='utf-8') as file:
+    writer = None
+    for doc in docs:
+        data = doc.to_dict()
+        data['id'] = doc.id  # Include doc ID
+        if writer is None:
+            writer = csv.DictWriter(file, fieldnames=data.keys())
+            writer.writeheader()
+        writer.writerow(data)
+
+print("✅ All messages exported to messages.csv")

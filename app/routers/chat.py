@@ -13,7 +13,7 @@ from firebase_admin import messaging, credentials
 import logging
 import json
 # Initialize Firebase Admin SDK 
-cred = credentials.Certificate("F:/Oasis_Infobyte/chat_app/app/firebase_credentials.json")
+cred = credentials.Certificate("app/firebase_credentials.json")
 firebase_admin.initialize_app(cred)
 
 router = APIRouter()
