@@ -1,2 +1,11 @@
-# Auto detect text files and perform LF normalization
+# Ensure all files use LF
 * text=auto
+
+# Specific rules (force LF for common text-based files)
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.html text eol=lf
+*.css text eol=lf
